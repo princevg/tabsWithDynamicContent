@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app="tabsApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabs app</title>        
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body onload="getData()">
+    <div class="worko-tabs">
+  
+    <input class="state" ng-model='tab1' type="radio" title="tab-one" name="tabs-state" id="tab-one" checked/>
+    <input class="state" ng-model='tab2' type="radio" title="tab-two" name="tabs-state" id="tab-two" onchange = 'getData(this)'/>
+    <input class="state" type="radio" title="tab-three" name="tabs-state" id="tab-three" onchange = 'getData(this)'/>
+    <input class="state" type="radio" title="tab-four" name="tabs-state" id="tab-four" onchange = 'getData(this)'/>
+
+    <div class="tabs flex-tabs">
+        <label for="tab-one" id="tab-one-label" class="tab">Tab One</label>
+        <label for="tab-two" id="tab-two-label" class="tab">Tab Two</label>
+        <label for="tab-three" id="tab-three-label" class="tab">Tab Three</label>
+        <label for="tab-four" id="tab-four-label" class="tab">Tab Four</label>
+
+
+        <div id="tab-one-panel" class="panel active"></div>
+        <div id="tab-two-panel" class="panel"></div>
+        <div id="tab-three-panel" class="panel"></div>
+        <div id="tab-four-panel" class="panel"></div>
+    </div>
+
+</div>
+<script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>
